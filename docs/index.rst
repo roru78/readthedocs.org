@@ -201,8 +201,6 @@ of Read the Docs and the larger software documentation ecosystem.
 
 * **Policies & Process**:
   :doc:`security` |
-  :doc:`Privacy policy <privacy-policy>` |
-  :doc:`Terms of service <terms-of-service>` |
   :doc:`DMCA takedown policy <dmca/index>` |
   :doc:`Policy for abandoned projects <abandoned-projects>` |
   :doc:`Release notes & changelog <changelog>`
@@ -220,6 +218,11 @@ of Read the Docs and the larger software documentation ecosystem.
 * **Read the Docs for Business**:
   :doc:`Support and additional features <commercial/index>`
 
+* **Legal documents**:
+  :doc:`Terms of service <terms-of-service>` |
+  :doc:`Privacy policy <privacy-policy>` |
+  :doc:`Data processing agreement <legal/dpa/index>`
+
 * **Running your own version of Read the Docs**:
   :doc:`Private installations <custom_installs/index>`
 
@@ -236,8 +239,6 @@ of Read the Docs and the larger software documentation ecosystem.
    code-of-conduct
 
    security
-   privacy-policy
-   terms-of-service
    dmca/index
    abandoned-projects
    changelog
@@ -251,5 +252,7 @@ of Read the Docs and the larger software documentation ecosystem.
    sponsors
 
    commercial/index
+
+   legal/index
 
    custom_installs/index
