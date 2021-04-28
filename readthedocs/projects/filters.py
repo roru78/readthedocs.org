@@ -29,10 +29,10 @@ class SortOrderingFilter(OrderingFilter):
             ('recent', _('Least recently built')),
         ]
 
-    def filter(self, queryset, values):
-        if values is None:
-            values = ['relevance']
-        return queryset.annotate(
+    def filter(self, qs, value):
+        if value is None:
+            value = ['relevance']
+        return qs.annotate(
             # Default ordering is number of builds, but could be another proxy
             # for version populatrity
             relevance=Count('builds'),
@@ -41,7 +41,7 @@ class SortOrderingFilter(OrderingFilter):
             # Alias field name here, as ``OrderingFilter`` was having trouble
             # doing this with it's native field mapping
             name=F('verbose_name'),
-        ).order_by(*values)
+        ).order_by(*value)
 
 
 class ProjectVersionSearchFilter(FilterSet):
@@ -96,6 +96,6 @@ class ProjectVersionSearchFilter(FilterSet):
     def get_visibility(self, queryset, name, value):
         if value == self.VISIBILITY_HIDDEN:
             return queryset.filter(hidden=True)
-        elif value == self.VISIBILITY_VISIBLE:
+        if value == self.VISIBILITY_VISIBLE:
             return queryset.filter(hidden=False)
         return queryset
